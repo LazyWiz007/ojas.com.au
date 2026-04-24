@@ -18,9 +18,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About & Sustainability", href: "/about" },
-    { name: "Our Businesses", href: "/businesses" },
-    { name: "Industries", href: "/industries" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Businesses", href: "/businesses" },
+    { name: "Sustainability", href: "/sustainability" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -57,19 +59,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex">
-          <Link
-            href="/contact"
-            className={`px-5 py-2.5 rounded text-sm font-medium transition-all ${
-              isScrolled
-                ? "bg-accent text-white hover:bg-accent-hover"
-                : "bg-white text-secondary hover:bg-gray-100"
-            }`}
-          >
-            Get in Touch
-          </Link>
-        </div>
+
 
         {/* Mobile Menu Toggle */}
         <button
@@ -104,15 +94,7 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-gray-100">
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="inline-block px-5 py-3 bg-accent text-white rounded font-medium w-full text-center"
-                >
-                  Get in Touch
-                </Link>
-              </div>
+
             </div>
           </motion.div>
         )}

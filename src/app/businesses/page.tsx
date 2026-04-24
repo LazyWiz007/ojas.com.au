@@ -43,10 +43,9 @@ export default function BusinessesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-40 h-24 mb-6 bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex items-center justify-center">
-                <Image src="/images/cable-australia.png" alt="Cable Australia Logo" width={140} height={80} className="object-contain" />
+              <div className="mb-10 relative h-32 w-[300px] md:h-48 md:w-[500px]">
+                <Image src="/images/cable-australia.png" alt="Cable Australia Logo" fill sizes="(max-width: 768px) 256px, 288px" className="object-contain object-left" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">Cable Australia</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Trusted Local Cable Supply for Critical Infrastructure.
               </p>
@@ -108,10 +107,9 @@ export default function BusinessesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-40 h-24 mb-6 bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex items-center justify-center">
-                <Image src="/images/cablab.png" alt="CabLab Logo" width={140} height={80} className="object-contain" />
+              <div className="mb-10 relative h-32 w-[300px] md:h-48 md:w-[500px]">
+                <Image src="/images/cablab.png" alt="CabLab Logo" fill sizes="(max-width: 768px) 256px, 288px" className="object-contain object-left" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">CabLab</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Independent Testing. Accurate Results. Trusted Insights.
               </p>
@@ -160,10 +158,9 @@ export default function BusinessesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-40 h-24 mb-6 bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex items-center justify-center">
-                <Image src="/images/elecsome.png" alt="ElecSome Logo" width={140} height={80} className="object-contain" />
+              <div className="mb-10 relative h-32 w-[300px] md:h-48 md:w-[500px]">
+                <Image src="/images/elecsome.png" alt="ElecSome Logo" fill sizes="(max-width: 768px) 256px, 288px" className="object-contain object-left" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">ElecSome</h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Solar Panel Recycling & Circular Energy Solutions.
               </p>
