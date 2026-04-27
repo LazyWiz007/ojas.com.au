@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import logo from "@/app/images/OG logo.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,13 +37,15 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col">
-          <span className={`text-2xl font-bold tracking-tight ${isScrolled ? "text-secondary" : "text-white"}`}>
-            OJAS <span className="text-accent">GROUP</span>
-          </span>
-          <span className={`text-xs uppercase tracking-widest ${isScrolled ? "text-secondary/70" : "text-white/80"}`}>
-            Industrial Excellence
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image 
+            src={logo} 
+            alt="Ojas Group" 
+            width={180} 
+            height={60} 
+            className="h-12 w-auto object-contain" 
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
