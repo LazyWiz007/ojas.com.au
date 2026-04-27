@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/app/images/OG logo.png";
+import logo from "@/app/images/og-logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

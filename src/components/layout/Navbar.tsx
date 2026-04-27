@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import logo from "@/app/images/OG logo.png";
+import logo from "@/app/images/og-logo.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
