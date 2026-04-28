@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ojas Group - Precision Engineering & Cable Manufacturing",
   description: "Australia-based industrial and cable manufacturing company committed to precision engineering, infrastructure, and industrial excellence.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
