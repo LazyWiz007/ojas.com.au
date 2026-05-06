@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2, ChevronRight, ArrowUpRight } from "lucide-react";
+import { ImageCarousel } from "@/components/visuals/ImageCarousel";
 
 export default function BusinessesPage() {
   return (
@@ -78,10 +79,19 @@ export default function BusinessesPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px] flex items-center justify-center bg-gray-100 group"
+              className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px] bg-gray-100"
             >
-              <img src="/images/business-cable-supply.png" alt="Industrial Cables Supply" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 mix-blend-multiply" />
-              <div className="absolute inset-0 bg-blue-900/10"></div>
+              <ImageCarousel 
+                images={[
+                  "/images/business-cable-supply.png",
+                  "/images/ca-gallery/image.png",
+                  "/images/ca-gallery/image2.png",
+                  "/images/ca-gallery/image3.png",
+                  "/images/ca-gallery/7837661e-e542-4f4b-98c1-6106774b77d6.jpeg",
+                  "/images/ca-gallery/ae5067dc-58e5-4d4e-a6e5-89b341554432.jpeg",
+                  "/images/ca-gallery/b7e23639-775d-424c-9aa4-f6fdf93c072a.jpeg",
+                ]} 
+              />
             </motion.div>
           </div>
         </div>

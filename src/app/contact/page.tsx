@@ -78,10 +78,15 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-secondary text-lg mb-1">Our Location</h4>
-                    <p className="text-gray-500 leading-relaxed">
-                      Naxos Way, Melbourne<br />
-                      VIC, Australia
-                    </p>
+                    <a 
+                      href="https://maps.google.com/?q=3/67+Naxos+Way,+Melbourne+Victoria+3173" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-gray-500 leading-relaxed hover:text-accent transition-colors block"
+                    >
+                      3/67 Naxos Way, Melbourne<br />
+                      Victoria 3173
+                    </a>
                   </div>
                 </div>
 
@@ -103,9 +108,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-secondary text-lg mb-1">Call Us</h4>
-                    <p className="text-gray-500 leading-relaxed font-medium">
-                      Inquiries via email preferred for technical specifications.
-                    </p>
+                    <a 
+                      href="tel:+61390412829" 
+                      className="text-gray-500 leading-relaxed font-medium hover:text-accent transition-colors block"
+                    >
+                      +61 3 9041 2829
+                    </a>
                   </div>
                 </div>
               </div>
@@ -209,17 +217,39 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[400px] w-full bg-gray-200 flex items-center justify-center relative grayscale group hover:grayscale-0 transition-all duration-700 overflow-hidden">
-         <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2000&auto=format&fit=crop" alt="Map View Placeholder" className="absolute inset-0 w-full h-full object-cover" />
-         <div className="absolute inset-0 bg-secondary/20"></div>
-         <div className="relative z-10 p-6 bg-white rounded-lg shadow-xl border border-gray-100 flex items-center space-x-4">
-            <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white">
-               <MapPin className="w-5 h-5" />
-            </div>
-            <div>
-               <h4 className="font-bold text-secondary">Australia Hub</h4>
-               <p className="text-xs text-gray-500">Melbourne & Brisbane Operations</p>
+      {/* Interactive Location Map */}
+      <section className="h-[500px] w-full relative overflow-hidden group">
+         <iframe
+           src="https://maps.google.com/maps?q=3/67+Naxos+Way,+Melbourne+Victoria+3173&t=h&z=18&ie=UTF8&iwloc=&output=embed"
+           width="100%"
+           height="100%"
+           style={{ border: 0 }}
+           allowFullScreen={true}
+           loading="lazy"
+           referrerPolicy="no-referrer-when-downgrade"
+           className="absolute inset-0 grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+         ></iframe>
+         
+         {/* Map Overlay Gradient */}
+         <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent pointer-events-none"></div>
+
+         {/* Legend / Info Box */}
+         <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 z-10 p-6 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 max-w-sm pointer-events-none transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+            <div className="flex items-start space-x-4">
+               <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white shadow-lg shadow-accent/40 flex-shrink-0">
+                  <MapPin className="w-6 h-6" />
+               </div>
+               <div>
+                  <h4 className="font-bold text-secondary text-lg mb-1">Ojas Group HQ</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                     3/67 Naxos Way, Melbourne<br />
+                     Victoria 3173, Australia
+                  </p>
+                  <div className="flex items-center space-x-2">
+                     <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Australia Hub</span>
+                     <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">Global Operations</span>
+                  </div>
+               </div>
             </div>
          </div>
       </section>

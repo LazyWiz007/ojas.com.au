@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import aboutImage from "@/app/images/CA images/imagek.png";
 
 export default function AboutSection() {
   const stats = [
@@ -49,17 +51,14 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-8"
           >
-            {/* Image Placeholder */}
             <div className="relative w-full h-[400px] overflow-hidden rounded shadow-xl group">
-              {/* Note: User requested placeholders for images */}
+              <Image 
+                src={aboutImage} 
+                alt="Ojas Group Operations" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-700" 
+              />
               <div className="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
-              <div className="w-full h-full bg-gray-200 flex items-center justify-center relative">
-                 <div className="absolute inset-0 opacity-10" style={{
-                    backgroundImage: `radial-gradient(#0A2540 1px, transparent 1px)`,
-                    backgroundSize: "20px 20px"
-                 }}></div>
-                 <span className="text-secondary/50 font-medium tracking-widest uppercase">Factory Operations Image</span>
-              </div>
             </div>
 
             {/* Counters */}

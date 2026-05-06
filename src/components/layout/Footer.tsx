@@ -80,15 +80,18 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-white/70 text-sm">
                 <MapPin size={18} className="text-accent flex-shrink-0 mt-0.5" />
-                <span>
-                  Naxos Way<br />
-                  Melbourne, VIC<br />
-                  Australia
-                </span>
+                <a href="https://maps.google.com/?q=3/67+Naxos+Way,+Melbourne+Victoria+3173" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  3/67 Naxos Way<br />
+                  Melbourne, Victoria 3173
+                </a>
               </li>
               <li className="flex items-center space-x-3 text-white/70 text-sm">
                 <Mail size={18} className="text-accent flex-shrink-0" />
                 <a href="mailto:sales@ojas.com.au" className="hover:text-white transition-colors">sales@ojas.com.au</a>
+              </li>
+              <li className="flex items-center space-x-3 text-white/70 text-sm">
+                <Phone size={18} className="text-accent flex-shrink-0" />
+                <a href="tel:+61390412829" className="hover:text-white transition-colors">+61 3 9041 2829</a>
               </li>
             </ul>
           </div>

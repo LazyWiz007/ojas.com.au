@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Target, ShieldCheck, Zap, Leaf } from "lucide-react";
+import aboutImage from "@/app/images/CA images/imagek.png";
 
 export default function AboutPage() {
   const values = [
@@ -92,39 +94,59 @@ export default function AboutPage() {
       {/* Strategy Section */}
       <section className="py-24">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-5 sticky top-24 lg:top-32"
             >
               <h2 className="text-sm font-bold text-accent uppercase tracking-widest mb-3">Our Strategy</h2>
               <h3 className="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
                 An Integrated Platform of Specialist Businesses
               </h3>
               <div className="w-20 h-1 bg-accent mb-8"></div>
-              <p className="text-gray-600 text-lg leading-relaxed font-medium">
-                Ojas Group’s strategy is to build an integrated platform of specialist businesses that supports the full lifecycle of energy and electrical infrastructure across Australia from cable supply and technical assurance through to recycling and material recovery.
+              <p className="text-gray-600 text-lg leading-relaxed font-medium mb-6">
+                Ojas Group’s strategy is to build an integrated platform of specialist businesses that supports the full lifecycle of energy and electrical infrastructure across Australia.
               </p>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  This strategy is driven by the growing demand for energy and infrastructure development, the global transition toward decarbonisation, and the increasing need for circular economy solutions that recover value from industrial and renewable assets.
+                </p>
+                <div className="bg-gray-50 p-8 rounded-xl border-l-4 border-accent mt-8 shadow-sm">
+                  <p className="font-semibold text-secondary italic">
+                    &quot;While each business maintains its own operational identity and expertise, they are strategically aligned under a unified group purpose.&quot;
+                  </p>
+                </div>
+              </div>
             </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-7 space-y-6 text-gray-600 text-lg leading-relaxed"
+              className="relative"
             >
-              <p>
-                This strategy is driven by the growing demand for energy and infrastructure development, the global transition toward decarbonisation, and the increasing need for circular economy solutions that recover value from industrial and renewable assets. It is also shaped by the need for customers to access reliable, compliant and technically capable partners within a single coordinated group rather than fragmented suppliers.
-              </p>
-              <p>
-                The group focuses on critical infrastructure sectors including energy, renewables, mining, utilities, and construction, where technical performance, compliance, and delivery certainty are essential. Growth is pursued in a disciplined way, with expansion into adjacent services only where it strengthens the integrated model and supports long-term customer needs.
-              </p>
-              <div className="bg-gray-50 p-8 rounded-xl border-l-4 border-accent mt-8 shadow-sm">
-                <p className="font-semibold text-secondary italic">
-                  &quot;While each business maintains its own operational identity and expertise, they are strategically aligned under a unified group purpose: to deliver integrated, reliable, and sustainable solutions for Australia’s industrial future.&quot;
-                </p>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[600px] group">
+                <Image 
+                  src={aboutImage} 
+                  alt="Ojas Group Operations" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent"></div>
+              </div>
+              
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 hidden md:block">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent">
+                    <ShieldCheck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-secondary uppercase tracking-wider">Certified Quality</p>
+                    <p className="text-xs text-gray-500">Industry Leading Standards</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
