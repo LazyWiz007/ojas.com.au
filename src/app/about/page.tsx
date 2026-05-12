@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Target, ShieldCheck, Zap, Leaf } from "lucide-react";
-import aboutImage from "@/app/images/CA images/imagek.png";
+import aboutImage from "@/app/images/image.png";
 
 export default function AboutPage() {
   const values = [

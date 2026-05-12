@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import aboutImage from "@/app/images/CA images/imagek.png";
+import aboutImage from "@/app/images/image.png";
 
 export default function AboutSection() {
   const stats = [
